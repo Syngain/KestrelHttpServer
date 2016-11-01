@@ -36,7 +36,7 @@ namespace SampleApp
             var host = new WebHostBuilder()
                 .UseKestrel(options =>
                 {
-                    // options.ThreadCount = 4;
+                    options.ThreadCount = 8;
                     options.NoDelay = true;
                     options.UseHttps("testCert.pfx", "testPassword");
                     options.UseConnectionLogging();
